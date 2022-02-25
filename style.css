@@ -56,9 +56,31 @@ li :hover {
 }
 #main {
     color: white;
+    font-family: raleway;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    justify-items:center;
+}
+#image {
+    grid-column: span 2;
 }
 #text{
     font-size: 62px;
+}
+#btn {
+    background-color: #758173;
+    color: #C5EFCB;
+    border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#arrow:hover{
+    color: black !important;
+    transform: translateX(50%);
 }
 svg {
     transition: 1s ease-out;
@@ -66,4 +88,16 @@ svg {
 svg:hover{
     transition: 0.5s ease-in;
     color:bisque;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+@keyframes movarrow {
+    from {left:0px;}
+    to {left: 50px;}
 }
