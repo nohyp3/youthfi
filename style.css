@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Nunito:ital,wght@1,900&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+*{
+    margin: 0;
+}
+body {
+    background-color: #020402;
+}
+.name {
+    display: inline-block;
+    left: 17px;
+    top: 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+
+    color: #758173;
+
+    text-shadow: 10px 4px 4px rgba(169, 197, 160, 0.25);
+}
+.links {
+    float: right;
+
+}
+nav {
+    display: inline;
+    background-color: #333;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    color: #758173;
+    background-color: #A9C5A0;
+    font-family: roboto;
+    margin: 20px;
+}
+li :hover {
+    cursor: pointer;
+    color:white;
+}
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    color: #C5EFCB;
+    font-family: raleway;
+    height: 80vh;
+    width: 100%;
+}
+#main {
+    color: white;
+}
+#text{
+    font-size: 62px;
+}
+svg {
+    transition: 1s ease-out;
+}
+svg:hover{
+    transition: 0.5s ease-in;
+    color:bisque;
+}
