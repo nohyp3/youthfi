@@ -82,6 +82,17 @@ li :hover {
     color: black !important;
     transform: translateX(50%);
 }
+#scribble {
+    position: absolute;
+}
+#scribble:hover {
+    display: inline;
+    color:darksalmon;
+    background-image: url("./icons/Untitled.png");
+    background-repeat: repeat;
+    width: 160px;
+    height: 40px;
+}
 svg {
     transition: 1s ease-out;
 }

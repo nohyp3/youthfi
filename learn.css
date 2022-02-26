@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Nunito:ital,wght@1,900&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+* {
+    margin: 0px;
+}
+body {
+    background-color: #020402;
+}
+.name {
+    display: inline-block;
+    left: 17px;
+    top: 0px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+
+    color: #758173;
+
+    text-shadow: 10px 4px 4px rgba(169, 197, 160, 0.25);
+}
+.links {
+    float: right;
+
+}
+nav {
+    display: inline;
+    background-color: #333;
+    margin-botton: 5vh;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    color: #758173;
+    background-color: #A9C5A0;
+    font-family: roboto;
+    margin: 20px;
+}
+li :hover {
+    cursor: pointer;
+    color:white;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+#section {
+    font-family: raleway;
+    color: white;
+    border-bottom: 3px solid #758173;
+}
+#title {
+    color: white;
+    font-family: raleway;
+}
+p{
+    font-family: raleway;
+    color: white;   
+}
+textarea {
+    border-radius: 15px;
+    background-color: #C4C4C4;
+    border: none;
+    font-family: roboto;
+    resize: none;
+}
+#top {
+    display: flex;
+    flex-direction: row;
+}
+/*progress bar*/
+#bar {
+    width: 100px;
+    height:20px;
+    background-color: white;
+    float: right;
+    margin-right: 4em;
+}
+#progress {
+    width: 30px;
+    height: 20px;
+    background-color: #A9C5A0;
+}
