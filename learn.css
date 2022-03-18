@@ -53,12 +53,12 @@ a:visited {
     text-decoration: none;
     color: inherit;
 }
-#section {
+.section {
     font-family: raleway;
     color: white;
     border-bottom: 3px solid #758173;
 }
-#title {
+.title {
     color: white;
     font-family: raleway;
 }
@@ -73,7 +73,7 @@ textarea {
     font-family: roboto;
     resize: none;
 }
-#top {
+.top {
     display: flex;
     flex-direction: row;
 }
