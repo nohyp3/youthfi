@@ -27,21 +27,21 @@ body {
 nav {
     display: inline;
     background-color: #333;
-    margin-botton: 5vh;
+    margin-bottom: 5vh;
 }
 nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-li {
+nav li {
     display: inline;
     color: #758173;
     background-color: #A9C5A0;
     font-family: roboto;
     margin: 20px;
 }
-li :hover {
+nav li :hover {
     cursor: pointer;
     color:white;
 }
@@ -89,4 +89,14 @@ textarea {
     width: 30px;
     height: 20px;
     background-color: #A9C5A0;
+}
+.normalList {
+    list-style-type: disc !important;
+    background-color: none;
+    display: block;
+}
+.normalList li{
+    color: peachpuff;
+    background-color: none;
+    font-family: roboto;
 }
