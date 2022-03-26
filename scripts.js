@@ -1,6 +1,44 @@
 'use strict';
 const e = React.createElement;
 
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      allowance: 0,
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.fifty = this.fifty.bind(this);
+  }
+  handleChange(e){
+    let val = e.target.value;
+    this.setState({
+      allowance: val
+    })
+  }
+  fifty() {
+    var percent = this.state.allowance*0.5;
+    return(percent)
+  }
+  thirty(){
+    var percent = this.state.allowance*0.3;
+    return(percent)
+  }
+  twenty(){
+    var percent = this.state.allowance*0.2;
+    return(percent)
+  }
+  render() {
+  return (
+    <div id="calculator">
+    <input id="allowance" type="text" placeholder="Input your allowance here!" onChange={this.handleChange}></input>
+    <p>{this.fifty()} goes to needs</p>
+    <p>{this.thirty()} goes to wants </p>
+    <p>{this.twenty()} goes to savings</p>
+    </div>
+  )
+  }
+}
 class Learn extends React.Component {
   constructor(props) {
     super(props);
@@ -9,11 +47,17 @@ class Learn extends React.Component {
       value: ''
     };
     this.increment = this.increment.bind(this);
+    this.decrement = this.decrement.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
   increment(){
     this.setState(prevState => ({
       stage: prevState.stage+1
+    }))
+  }
+  decrement(){
+    this.setState(prevState => ({
+      stage: prevState.stage-1
     }))
   }
   handleChange(event) {    
@@ -56,7 +100,10 @@ class Learn extends React.Component {
               <div id="progress"></div>
           </div>
           <h1 className="title">Setting Goals</h1>
+          <h2>and how to achieve them</h2>
+          <div className = "introduction">
           <p>We can have many goals, they could be long-term or short term goals. Some short term goals could include getting a good grade on your next test or simply saving up more money to get that new product!</p>
+          </div>
           <p>Whatever our goals may be, they are often determined by a few main things:</p>
           <ul className="normalList">
             <li>Life Events - what has happened to you before?</li>
@@ -74,7 +121,9 @@ class Learn extends React.Component {
           5.
       </textarea>
       <input type="button" id="done-btn" value="download txt file!" onClick={() => {this.download("goals.txt",this.state.value)}}/>
+      <div className="buttonContainer">
       <button className="button" onClick={this.increment}>Next!</button>
+      </div>
       </div>
     )
     }
@@ -87,8 +136,32 @@ class Learn extends React.Component {
           <div id="progress"></div>
           </div>
         <h1 className="title">Budgeting</h1>
-        <h2>how can you manage your money?</h2>
+        <h2>How Can You Manage Your Money?</h2>
+        <div className = "introduction">
+          <p>Ever wanted something but you found out you spent your money on something previously and now can't afford it? Ever regretted what you bought? 
+            Sounds like you should have budgeted your money!
+          </p>
+        </div>
+        <div className = "mainContent">
+          <p>Sounds like you could have benefitted from budgeting!</p>
+          <p>Budgeting - is the process of creating a plan to spend your money</p>
+          <p>Budgeting has many benefits such as:</p>
+          <ul>
+            <li>Helping you be smart with your money</li>
+            <li>Minimizing financial stress</li>
+            <li>Being able to compare and track your spending month to month</li>
+            <li>Seeing how your spending habits affeect your budget</li>
+            <li>Finding ways to save money</li>
+          </ul>
+          <p>A popular model for saving money is the 50/30/20 rule. 50% of your money goes to your NEEDS, 30% to your WANTS and 20% to your savings</p>
+          <Calculator />
+          <p></p>
+        </div>
+
+        <div className="buttonContainer">
         <button onClick={this.increment}>Next Lesson!</button>
+        <button className="button" onClick={this.decrement}>Previous!</button>
+        </div>
         </div>
       )
     }
@@ -103,6 +176,7 @@ class Learn extends React.Component {
         <h1 className="title">Growing Money</h1>
         <h2>how can you manage your money?</h2>
         <button onClick={this.increment}>Next Lesson!</button>
+        <button className="button" onClick={this.decrement}>Previous!</button>
         </div>
       )
     }
@@ -116,6 +190,7 @@ class Learn extends React.Component {
           </div>
         <h1 className="title">Career Planning</h1>
         <h2>how can you manage your money?</h2>
+        <button className="button" onClick={this.decrement}>Previous!</button>
         </div>
       )
     }

@@ -62,6 +62,10 @@ a:visited {
     color: white;
     font-family: raleway;
 }
+h2 {
+    font-family: nunito;
+    color: #758173;
+}
 p{
     font-family: raleway;
     color: white;   
@@ -100,3 +104,36 @@ textarea {
     background-color: none;
     font-family: roboto;
 }
+.introduction {
+    margin: 2em;
+    background-color:#A9C5A0;
+    padding: 2em;
+}
+.mainContent {
+    margin: 2em;
+    background-color: #5B9DF0;
+    padding: 1em;
+}
+.mainContent p{
+    color: #070709;
+
+}
+
+/*button container */
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    margin-left: 2em;
+}
+
+/*calculator*/
+input {
+    outline: none;
+}
+#calculator {
+    background-color: whitesmoke;
+    padding: 1em;
+    border-radius: 15px;
+}
+
