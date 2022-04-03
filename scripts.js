@@ -18,23 +18,24 @@ class Calculator extends React.Component {
   }
   fifty() {
     var percent = this.state.allowance*0.5;
-    return(percent)
+    return(percent.toFixed(2))
   }
   thirty(){
     var percent = this.state.allowance*0.3;
-    return(percent)
+    return(percent.toFixed(2))
   }
   twenty(){
     var percent = this.state.allowance*0.2;
-    return(percent)
+    return(percent.toFixed(2))
   }
   render() {
   return (
     <div id="calculator">
-    <input id="allowance" type="text" placeholder="Input your allowance here!" onChange={this.handleChange}></input>
-    <p>{this.fifty()} goes to needs</p>
-    <p>{this.thirty()} goes to wants </p>
-    <p>{this.twenty()} goes to savings</p>
+    <h2>50/30/20 Rule Calculator</h2>
+    <label>$</label><input id="allowance" type="text" placeholder="Input allowance!" onChange={this.handleChange}></input>
+    <p>${this.fifty()} goes to needs</p>
+    <p>${this.thirty()} goes to wants </p>
+    <p>${this.twenty()} goes to savings</p>
     </div>
   )
   }
@@ -175,6 +176,35 @@ class Learn extends React.Component {
           </div>
         <h1 className="title">Growing Money</h1>
         <h2>how can you manage your money?</h2>
+        <div className="introduction">
+          <p>We've all heard the saying money doesn't grow on trees, but what if you could grow your money?</p>
+        </div>
+        <div className="mainContent">
+          <p>Well you can! Just not from the ground that is. Growing your money just means to allow the amount of money you have.. grow! People accomplish this through a number of different ways, but all of them involve
+            already having money and letting it "work" for you to make more of it.
+          </p>
+          <p>The main two ways are to save your money in a special kind of bank account, or to invest it.</p>
+          <h3>Savings Accounts</h3>
+          <p>Savings accounts are bank accounts that are low risk. They are safe and liquid, meaning that you can convert the
+            money stored in your account into cold hard cash easily. You can do this by widthdrawing money from this account. These accounts are best 
+            for... well saving money! These accounts help you store your money for specific goals and purposes. There are short term goals
+            and long term goals, but a savings account can be used for both! As a student, savings accounts are usually free! With savings accounts, you also get paid <b>interest</b>
+            for the money you store in your account. This is because the bank uses your money to lend (give) to another person who borrows for purposes like buying a house etcetera. 
+            The bank charges interest to these people for borrowing money from them, and you get a small cut out of it.
+          </p>
+          <h3>Investing</h3>
+          <p>Nowadays it seems to be easier and easier to invest money using apps or services that are easily available to everyone! Investing
+            doesn't just have to be in the stock market where you may picture green and red lines.
+          </p>
+          <img alt="image of stockmarket graph"></img>
+          <p>People may invest in a number of other things as well, they maay put money into things called mutual funds, invest in real estate, crypto or even a business of their own!
+            With investing, it is often used for longer term goals, is riskier and volatile but there is potential for great returns.
+          </p>
+          <h3>Stocks</h3>
+          <h3>Mutual Funds</h3>
+          <h3>Real Estate</h3>
+        </div>
+
         <button onClick={this.increment}>Next Lesson!</button>
         <button className="button" onClick={this.decrement}>Previous!</button>
         </div>
@@ -189,7 +219,30 @@ class Learn extends React.Component {
           <div id="progress"></div>
           </div>
         <h1 className="title">Career Planning</h1>
-        <h2>how can you manage your money?</h2>
+        <h2>What do you want to do when you're older?</h2>
+        <div className="introduction">
+          <p>It's a scary thought to think about sometimes, but it's also exiciting at the same time!</p>
+        </div>
+        <div className="mainSection">
+          <p>With career planning, there are some things you want to think about. You want to first discover yourself, what are your interests? Your goals? 
+          your aspirations? With all these things to consider, you'll want to explore all your options!</p>
+          <p>With all that, you'll want to think about these things before making a decision in the future:</p>
+          <ul>
+            <li>What is the different between the job and the career?</li>
+            <li>What career interests you?</li>
+            <li>What skills/attributes/knowledge is needed?</li>
+            <li>Where can you get the things needed above?</li>
+            <li>How much will the education or training cost?</li>
+            <li>Is the amount of money you can make the most important thing to you, or is the job's satisfaction/happiness more important?</li>
+          </ul>
+          <p>These seem like hard things to think about, and they are. That's why it may make sense to consider the costs first</p>
+          <ul>
+            <li>What are the costs of enrolling into a program? Research this program</li>
+            <li>How are classes taught, are they taught in your learning style?</li>
+            <li>What are some additional costs to consider? (books, lab fees, technology)</li>
+            <li>Will you have to pay to live on the residence of the school? Where will you live?</li>
+          </ul>
+        </div>
         <button className="button" onClick={this.decrement}>Previous!</button>
         </div>
       )
