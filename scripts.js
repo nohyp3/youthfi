@@ -1,6 +1,5 @@
 'use strict';
 const e = React.createElement;
-
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
@@ -70,7 +69,7 @@ class Learn extends React.Component {
     var id = setInterval(frame, 10);
     var stage = this.state.stage;
     function frame() {
-      if (width >= stage*25) {
+      if (width >= stage*20) {
         clearInterval(id);
       } else {
         width++; 
@@ -90,6 +89,8 @@ class Learn extends React.Component {
   
     document.body.removeChild(element);
   }
+
+
   first(stage) {
     this.move();
     if(stage === 1){
@@ -227,7 +228,7 @@ class Learn extends React.Component {
           <p>With career planning, there are some things you want to think about. You want to first discover yourself, what are your interests? Your goals? 
           your aspirations? With all these things to consider, you'll want to explore all your options!</p>
           <p>With all that, you'll want to think about these things before making a decision in the future:</p>
-          <ul>
+          <ul className="normalList">
             <li>What is the different between the job and the career?</li>
             <li>What career interests you?</li>
             <li>What skills/attributes/knowledge is needed?</li>
@@ -236,14 +237,29 @@ class Learn extends React.Component {
             <li>Is the amount of money you can make the most important thing to you, or is the job's satisfaction/happiness more important?</li>
           </ul>
           <p>These seem like hard things to think about, and they are. That's why it may make sense to consider the costs first</p>
-          <ul>
+          <ul className="normalList">
             <li>What are the costs of enrolling into a program? Research this program</li>
             <li>How are classes taught, are they taught in your learning style?</li>
             <li>What are some additional costs to consider? (books, lab fees, technology)</li>
             <li>Will you have to pay to live on the residence of the school? Where will you live?</li>
           </ul>
         </div>
+        <button onClick={this.increment}>Let's finish this!</button>
         <button className="button" onClick={this.decrement}>Previous!</button>
+        </div>
+      )
+    }
+    else if(stage === 5){
+      return(
+        <div>
+          <h1><span className="section">End</span></h1>
+          <div className ="top"></div>
+          <div id="bar">
+          <div id="progress"></div>
+          </div>
+        <h1 className="title">Congratulations!</h1>
+        <h2>You've made it to the end!</h2>
+        <iframe src="https://giphy.com/embed/1RP4uF79Owkpv1FNpU" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/party-celebration-fireworks-1RP4uF79Owkpv1FNpU">via GIPHY</a></p>
         </div>
       )
     }
@@ -251,6 +267,7 @@ class Learn extends React.Component {
       window.alert(this.state.stage);
     }
   }
+  
   render() {
     return(
       this.first(this.state.stage)
@@ -258,7 +275,9 @@ class Learn extends React.Component {
     
   }
 } 
+
 ReactDOM.render(<Learn />, document.getElementById("main"));
+
 //const domContainer = document.querySelector('#main');ReactDOM.render(e(LikeButton), domContainer);
 /*function download(filename, text) {
   var element = document.createElement('a');
